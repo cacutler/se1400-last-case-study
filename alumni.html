@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dixie State University :: Alumni</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <meta name="description" content="This page allows people to sign up for the Dixie State University Alumni Newsletter.">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script>
+            function validateForm() {
+                if (document.forms[0].myEmail.value == "" ) {
+                    alert("Please enter an e-mail address.");
+                    return false;
+                } // end if statement
+                return true;
+            } // end function validateForm
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="redbar"></div>
+            <div id="greybar"></div>
+            <header>
+                <a href="index.html"><h1>Dixie State University</h1></a>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="students.html">Students</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="alumni.html">Alumni</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </nav>
+            <div id="alumnihero"></div>
+            <main>
+                <h2>Join Alumni Mailing List</h2>
+                <h3>Request Alumni Newsletter</h3>
+                <p>Required information is marked with an asterisk (*)</p>
+                <form method="post" onsubmit="return validateForm();" action="https://cit.dixie.edu/web/1400/mail.php">
+                    <label for="fname">First Name:</label>
+                    <input id="fname" name="FName">
+                    <label for="lname">Last Name:</label>
+                    <input id="lname" name="LName">
+                    <label for="myEmail">E-mail:</label>
+                    <input type="text" name="myEmail" id="myEmail">
+                    <label for="myphone">Phone:</label>
+                    <input id="myphone" name="myPhone" type="tel">
+                    <label for="graduationdate">Graduation Date</label>
+                    <input id="graduationdate" name="myGraduationDate" type="date">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" cols="20" rows="2"></textarea>
+                    <button id="mySubmit">Submit</button>
+                </form>
+            </main>
+            <footer>
+                <p>Copyright &copy; 2021 Dixie State University<br>alex@cutler.com</p>
+            </footer>
+        </div>
+    </body>
+</html>
